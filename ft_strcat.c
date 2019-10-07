@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bclerc <bclerc@student.42.fr>              +#+  +:+       +#+        */
+/*   By: bclerc <bclerc@student.42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018`/11/07 15:12:19 by bclerc            #+#    #+#             */
-/*   Updated: 2018/11/11 10:58:34 by bclerc           ###   ########.fr       */
+/*   Created: 2019/10/07 11:33:11 by bclerc            #+#    #+#             */
+/*   Updated: 2019/10/07 11:33:12 by bclerc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strcat(char *dest, const char *src)
 	int i;
 	int b;
 
-	if(!dest || !src)
+	if (!dest || !src)
 		return (NULL);
 	i = ft_strlen(dest);
 	b = 0;

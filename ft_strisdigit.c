@@ -6,12 +6,13 @@
 /*   By: bclerc <bclerc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/28 14:27:37 by bclerc            #+#    #+#             */
-/*   Updated: 2019/04/03 13:17:40 by bclerc           ###   ########.fr       */
+/*   Updated: 2019/10/07 11:29:47 by bclerc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
+
 int	ft_strisdigit(char *str)
 {
 	int i;
@@ -19,7 +20,8 @@ int	ft_strisdigit(char *str)
 	i = 0;
 	while (str[i])
 	{
-		if (!ft_isdigit(str[i]) && str[i] != ' ' && !(str[i] == '-' && ft_isdigit(str[i + 1])))
+		if (!ft_isdigit(str[i]) && str[i] != ' ' && !(str[i] == '-'
+			&& ft_isdigit(str[i + 1])))
 			return (0);
 		i++;
 	}
