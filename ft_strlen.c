@@ -6,11 +6,11 @@
 /*   By: bclerc <bclerc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 13:47:37 by bclerc            #+#    #+#             */
-/*   Updated: 2018/11/21 16:49:30 by bclerc           ###   ########.fr       */
+/*   Updated: 2019/04/03 16:39:44 by bclerc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *str)
 {

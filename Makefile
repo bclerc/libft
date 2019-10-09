@@ -6,7 +6,7 @@
 #    By: bclerc <bclerc@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: Invalid date        by  bclerc           #+#    #+#              #
-#    Updated: 2018/12/06 14:01:47 by bclerc           ###   ########.fr        #
+#    Updated: 2019/10/07 11:35:37 by bclerc           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,12 +30,14 @@ CFLAGS = -Werror -Wall -Wextra
 
 SRC= 		ft_memset.c \
 			ft_bzero.c \
+			ft_strisdigit.c \
 			ft_lstdel.c \
 			ft_memcpy.c \
 			ft_swap.c \
 			ft_memccpy.c \
 			ft_putnstr.c \
 			ft_strsave.c \
+			ft_strcdup.c \
 			ft_memmove.c \
 			ft_memcmp.c \
 			ft_lstdelone.c \

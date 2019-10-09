@@ -1,20 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnstr.c                                       :+:      :+:    :+:   */
+/*   ft_strisdigit.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bclerc <bclerc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/28 17:26:00 by bclerc            #+#    #+#             */
-/*   Updated: 2019/10/07 11:30:47 by bclerc           ###   ########.fr       */
+/*   Created: 2019/03/28 14:27:37 by bclerc            #+#    #+#             */
+/*   Updated: 2019/10/07 11:29:47 by bclerc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
+#include <stdio.h>
 
-void	ft_putnstr(char *s, int n)
+int	ft_strisdigit(char *str)
 {
-	if (!s)
-		return ;
-	write(1, s, n);
+	int i;
+
+	i = 0;
+	while (str[i])
+	{
+		if (!ft_isdigit(str[i]) && str[i] != ' ' && !(str[i] == '-'
+			&& ft_isdigit(str[i + 1])))
+			return (0);
+		i++;
+	}
+	return (1);
 }

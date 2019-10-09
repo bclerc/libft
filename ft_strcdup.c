@@ -1,20 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnstr.c                                       :+:      :+:    :+:   */
+/*   ft_strcdup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bclerc <bclerc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/28 17:26:00 by bclerc            #+#    #+#             */
-/*   Updated: 2019/10/07 11:30:47 by bclerc           ###   ########.fr       */
+/*   Created: 2019/04/03 13:09:40 by bclerc            #+#    #+#             */
+/*   Updated: 2019/10/07 11:31:50 by bclerc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
-void	ft_putnstr(char *s, int n)
+char	*ft_strcdup(char *str, char c)
 {
-	if (!s)
-		return ;
-	write(1, s, n);
+	int i;
+
+	i = 0;
+	while (str[i] && str[i] != c)
+		i++;
+	return (ft_strndup(str, i));
 }
