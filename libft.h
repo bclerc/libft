@@ -6,7 +6,7 @@
 /*   By: bclerc <bclerc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 08:34:51 by bclerc            #+#    #+#             */
-/*   Updated: 2019/04/03 13:12:25 by bclerc           ###   ########.fr       */
+/*   Updated: 2019/11/13 16:08:47 by bclerc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ void			ft_putnstr(char *s, int n);
 char			*ft_strsave(char *s, char c);
 char			*ft_strcdup(char *str, char c);
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
+int				ft_isupper(char c);
 int				ft_strisdigit(char *str);
 void			*ft_memalloc(size_t size);
 void			ft_lstdel(t_list **alst, void (*del)(void *, size_t));
