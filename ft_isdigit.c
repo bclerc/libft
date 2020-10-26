@@ -16,3 +16,10 @@ int	ft_isdigit(int c)
 		return (1);
 	return (0);
 }
+
+int ft_todigit(int c)
+{
+	if (ft_isdigit(c))
+		return (c + 32);
+	return (0);
+}

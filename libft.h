@@ -33,6 +33,7 @@ char			*ft_strsave(char *s, char c);
 char			*ft_strcdup(char *str, char c);
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
 int				ft_isupper(char c);
+int				ft_todigit(int c);
 int				ft_strisdigit(char *str);
 void			*ft_memalloc(size_t size);
 void			ft_lstdel(t_list **alst, void (*del)(void *, size_t));
