@@ -40,11 +40,12 @@ char	*ft_strsdup(char *str, char *set)
 	i = 0;
 	while (str[i])
 	{
+		printf("WWWW %c", str[i]);
 		b = 0;
 		while (set[b])
 		{
 			if (str[i] == str[b])
-				return (ft_strndup(str, i))
+				return (ft_strndup(str, i));
 			b++;
 		}
 		i++;
