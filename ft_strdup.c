@@ -31,3 +31,23 @@ char	*ft_strdup(const char *s)
 	tab[i] = '\0';
 	return (tab);
 }
+
+char	*ft_strsdup(char *str, char *set)
+{
+	int i;
+	int b;
+
+	i = 0;
+	while (str[i])
+	{
+		b = 0;
+		while (set[b])
+		{
+			if (str[i] == str[b])
+				return (ft_strndup(str, i))
+			b++;
+		}
+		i++;
+	}
+	return (0);
+}

@@ -35,6 +35,7 @@ int				ft_memcmp(const void *s1, const void *s2, size_t n);
 int				ft_isupper(char c);
 int				ft_todigit(int c);
 int				ft_strisdigit(char *str);
+char			*ft_strsdup(char *str, char *set);
 void			*ft_memalloc(size_t size);
 void			ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
