@@ -6,7 +6,7 @@
 /*   By: bclerc <bclerc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 13:52:52 by bclerc            #+#    #+#             */
-/*   Updated: 2018/11/24 13:48:22 by bclerc           ###   ########.fr       */
+/*   Updated: 2020/10/26 16:28:27 by bclerc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,11 +40,10 @@ char	*ft_strsdup(char *str, char *set)
 	i = 0;
 	while (str[i])
 	{
-		printf("WWWW %c", str[i]);
 		b = 0;
 		while (set[b])
 		{
-			if (str[i] == str[b])
+			if (str[i] == set[b])
 				return (ft_strndup(str, i));
 			b++;
 		}
