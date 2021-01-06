@@ -6,7 +6,7 @@
 /*   By: bclerc <bclerc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 08:34:51 by bclerc            #+#    #+#             */
-/*   Updated: 2019/11/13 16:08:47 by bclerc           ###   ########.fr       */
+/*   Updated: 2021/01/06 15:53:56 by bclerc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,7 @@ void			ft_putendl_fd(char const *s, int fd);
 void			ft_putnbr(int i);
 void			ft_putnbr_fd(int i, int fd);
 char			*ft_itoa(int n);
+char			*ft_itoa_base(int value, int base);
 size_t			ft_abs(int nb);
 char			**ft_strsplit(char const *s, char c);
 #endif

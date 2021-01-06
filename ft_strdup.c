@@ -6,7 +6,7 @@
 /*   By: bclerc <bclerc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 13:52:52 by bclerc            #+#    #+#             */
-/*   Updated: 2020/10/26 16:28:27 by bclerc           ###   ########.fr       */
+/*   Updated: 2021/01/05 11:46:16 by bclerc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ char	*ft_strsdup(char *str, char *set)
 		while (set[b])
 		{
 			if (str[i] == set[b])
-				return (ft_strndup(str, i));
+				return (ft_strndup(str, i + 1));
 			b++;
 		}
 		i++;
