@@ -6,7 +6,7 @@
 /*   By: bclerc <bclerc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/10 04:23:59 by bclerc            #+#    #+#             */
-/*   Updated: 2021/01/07 11:53:47 by bclerc           ###   ########.fr       */
+/*   Updated: 2021/01/07 12:18:49 by bclerc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,8 @@ char		*ft_itoa_base(int value, int base)
 		return (NULL);
 	while (len + neg - 2 >= 0)
 	{
-		tab[len + neg - 2] = hex[absolut % base];
+		if (maj)
+			tab[len + neg - 2] = hex[absolut % base];
 		absolut /= base;
 		len--;
 	}
