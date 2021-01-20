@@ -6,7 +6,7 @@
 /*   By: bclerc <bclerc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 08:34:51 by bclerc            #+#    #+#             */
-/*   Updated: 2021/01/11 11:02:52 by bclerc           ###   ########.fr       */
+/*   Updated: 2021/01/20 13:19:38 by bclerc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,6 +89,6 @@ void			ft_putnbr(int i);
 void			ft_putnbr_fd(int i, int fd);
 char			*ft_itoa(int n);
 char			*ft_itoa_base(long value, int bases);
-size_t			ft_abs(int nb);
+long long		ft_abs(long long nb);
 char			**ft_strsplit(char const *s, char c);
 #endif

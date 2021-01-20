@@ -6,7 +6,7 @@
 /*   By: bclerc <bclerc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 09:00:49 by bclerc            #+#    #+#             */
-/*   Updated: 2018/11/11 10:32:45 by bclerc           ###   ########.fr       */
+/*   Updated: 2021/01/20 17:05:00 by bclerc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_isdigit(int c)
 	return (0);
 }
 
-int ft_todigit(int c)
+int	ft_todigit(int c)
 {
 	if (ft_isdigit(c))
 		return (c + 32);
