@@ -6,7 +6,7 @@
 /*   By: bclerc <bclerc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/28 17:59:05 by bclerc            #+#    #+#             */
-/*   Updated: 2019/10/07 11:25:15 by bclerc           ###   ########.fr       */
+/*   Updated: 2021/08/28 17:41:02 by bclerc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,8 @@ char	*ft_strsave(char *s, char c)
 	{
 		if (s[i] == c)
 		{
-			if (!(pt = ft_memcpy(pt, &s, ft_strlen(&*s))))
+			pt = ft_memcpy(pt, &s, ft_strlen(&*s));
+			if (!pt)
 				return (NULL);
 			else
 				return (pt);

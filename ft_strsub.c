@@ -6,7 +6,7 @@
 /*   By: bclerc <bclerc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/10 23:05:59 by bclerc            #+#    #+#             */
-/*   Updated: 2018/11/23 15:06:58 by bclerc           ###   ########.fr       */
+/*   Updated: 2021/08/28 17:35:14 by bclerc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 
 	if (!s)
 		return (NULL);
-	if ((rt = (char*)malloc((len + 1) * sizeof(char))) == NULL)
+	rt = (char *)malloc((len + 1) * sizeof(char));
+	if (!rt)
 		return (0);
 	i = start;
 	b = 0;

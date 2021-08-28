@@ -6,7 +6,7 @@
 /*   By: bclerc <bclerc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/13 14:09:33 by bclerc            #+#    #+#             */
-/*   Updated: 2021/01/19 15:38:23 by bclerc           ###   ########.fr       */
+/*   Updated: 2021/08/28 17:44:13 by bclerc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@ char	*ft_strndup(const char *str, int len)
 	int		i;
 	char	*tmp;
 
-	if (!(tmp = (char*)malloc((len + 1) * sizeof(char))))
+	tmp = (char *)malloc((len + 1) * sizeof(char));
+	if (!tmp)
 		return (NULL);
 	ft_bzero(tmp, len);
 	i = 0;

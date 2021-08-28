@@ -6,13 +6,13 @@
 /*   By: bclerc <bclerc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 13:23:59 by bclerc            #+#    #+#             */
-/*   Updated: 2018/11/20 17:20:13 by bclerc           ###   ########.fr       */
+/*   Updated: 2021/08/28 17:48:53 by bclerc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_striter(char *s, void (*f)(char *))
 {
-	int i;
+	int	i;
 
 	if (!s || !f)
 		return ;

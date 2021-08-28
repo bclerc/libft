@@ -6,13 +6,13 @@
 /*   By: bclerc <bclerc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 13:43:46 by bclerc            #+#    #+#             */
-/*   Updated: 2018/11/20 17:19:00 by bclerc           ###   ########.fr       */
+/*   Updated: 2021/08/28 17:48:38 by bclerc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	int i;
+	int	i;
 
 	if (!s || !f)
 		return ;

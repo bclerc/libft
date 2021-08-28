@@ -6,7 +6,7 @@
 /*   By: bclerc <bclerc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 11:08:31 by bclerc            #+#    #+#             */
-/*   Updated: 2018/11/21 16:32:17 by bclerc           ###   ########.fr       */
+/*   Updated: 2021/08/28 17:52:41 by bclerc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	{
 		while (n >= 1)
 		{
-			((char*)dest)[n - 1] = ((char*)src)[n - 1];
+			((char *)dest)[n - 1] = ((char *)src)[n - 1];
 			n--;
 		}
 	}

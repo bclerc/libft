@@ -6,12 +6,19 @@
 /*   By: bclerc <bclerc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 09:33:45 by bclerc            #+#    #+#             */
-/*   Updated: 2021/01/07 15:05:16 by bclerc           ###   ########.fr       */
+/*   Updated: 2021/08/28 18:04:55 by bclerc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "limits.h"
+
+long long	check_neg(int neg, int value)
+{
+	if (neg)
+		return ((int) -value);
+	return ((int) value);
+}
 
 int	ft_atoi(const char *str)
 {
@@ -22,7 +29,7 @@ int	ft_atoi(const char *str)
 	i = 0;
 	neg = 0;
 	while (str[i] && (str[i] == '\r' || str[i] == '\t' || str[i] == ' '
-				|| str[i] == '\v' || str[i] == '\f' || str[i] == '\n'))
+			|| str[i] == '\v' || str[i] == '\f' || str[i] == '\n'))
 		i++;
 	if (str[i] == '+' || str[i] == '-')
 	{
@@ -36,6 +43,5 @@ int	ft_atoi(const char *str)
 		b = (b * 10) + (str[i] - '0');
 		i++;
 	}
-	b = neg ? (int)-b : (int)b;
-	return (b);
+	return (check_neg(neg, b));
 }

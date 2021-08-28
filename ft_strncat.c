@@ -6,7 +6,7 @@
 /*   By: bclerc <bclerc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 15:24:16 by bclerc            #+#    #+#             */
-/*   Updated: 2018/11/11 15:26:16 by bclerc           ###   ########.fr       */
+/*   Updated: 2021/08/28 17:44:44 by bclerc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 char	*ft_strncat(char *dest, const char *src, size_t n)
 {
-	int i;
-	int b;
+	int	i;
+	int	b;
 
 	i = ft_strlen(dest);
 	b = 0;

@@ -6,7 +6,7 @@
 /*   By: bclerc <bclerc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 14:48:46 by bclerc            #+#    #+#             */
-/*   Updated: 2018/11/11 11:11:33 by bclerc           ###   ########.fr       */
+/*   Updated: 2021/08/28 17:45:27 by bclerc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	if (!s)
 		return (NULL);
 	len = ft_strlen((char *)s);
-	if ((tmp = (char*)malloc((len + 1) * sizeof(char))) == NULL)
+	tmp = (char *)malloc((len + 1) * sizeof(char));
+	if (tmp == NULL)
 		return (NULL);
 	i = 0;
 	while (s[i])

@@ -6,11 +6,13 @@
 /*   By: bclerc <bclerc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/10 04:34:35 by bclerc            #+#    #+#             */
-/*   Updated: 2021/01/20 17:04:24 by bclerc           ###   ########.fr       */
+/*   Updated: 2021/08/28 18:05:39 by bclerc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 long long	ft_abs(long long nb)
 {
-	return (nb < 0 ? -nb : nb);
+	if (nb < 0)
+		return (-nb);
+	return (nb);
 }

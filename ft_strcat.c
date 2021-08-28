@@ -6,7 +6,7 @@
 /*   By: bclerc <bclerc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/20 17:03:26 by bclerc            #+#    #+#             */
-/*   Updated: 2021/01/20 17:03:27 by bclerc           ###   ########.fr       */
+/*   Updated: 2021/08/28 17:51:57 by bclerc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strcat(char *dest, const char *src)
 {
-	int i;
-	int b;
+	int	i;
+	int	b;
 
 	if (!dest || !src)
 		return (NULL);

@@ -6,7 +6,7 @@
 /*   By: bclerc <bclerc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/10 04:23:59 by bclerc            #+#    #+#             */
-/*   Updated: 2021/01/20 17:03:45 by bclerc           ###   ########.fr       */
+/*   Updated: 2021/08/28 18:00:33 by bclerc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static	int	get_len(size_t value, int base)
 {
-	int count;
+	int	count;
 
 	count = 0;
 	while (value >= base)
@@ -25,7 +25,7 @@ static	int	get_len(size_t value, int base)
 	return (count + 1);
 }
 
-char		*ft_itoa(int value)
+char	*ft_itoa(int value)
 {
 	static char		hex[] = "0123456789";
 	char			*tab;
@@ -33,11 +33,13 @@ char		*ft_itoa(int value)
 	int				len;
 	int				neg;
 
-	neg = value < 0 ? 2 : 1;
+	if (value < 0)
+		neg = 2;
+	else
+		neg = 1;
 	absolut = ft_abs(value);
 	len = get_len(absolut, 10);
-	if (!(tab = ft_strnew((len + neg) - 1)))
-		return (NULL);
+	tab = ft_strnew((len + neg) - 1);
 	while (len + neg - 2 >= 0)
 	{
 		tab[len + neg - 2] = hex[absolut % 10];
@@ -49,7 +51,7 @@ char		*ft_itoa(int value)
 	return (tab);
 }
 
-char		*ft_itoa_base(long value, int base)
+char	*ft_itoa_base(long value, int base)
 {
 	static char		hex[] = "0123456789ABCDEF";
 	char			*tab;
@@ -57,10 +59,14 @@ char		*ft_itoa_base(long value, int base)
 	long			len;
 	long			neg;
 
-	neg = value < 0 ? 2 : 1;
+	if (value < 0)
+		neg = 2;
+	else
+		neg = 1;
 	absolut = ft_abs(value);
 	len = get_len(absolut, base);
-	if (!(tab = ft_strnew((len + neg) - 1)))
+	tab = ft_strnew((len + neg) - 1);
+	if (!(tab))
 		return (NULL);
 	while (len + neg - 2 >= 0)
 	{

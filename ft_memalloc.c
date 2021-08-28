@@ -6,7 +6,7 @@
 /*   By: bclerc <bclerc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 11:07:09 by bclerc            #+#    #+#             */
-/*   Updated: 2018/11/11 10:37:38 by bclerc           ###   ########.fr       */
+/*   Updated: 2021/08/28 17:55:11 by bclerc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,10 @@
 
 void	*ft_memalloc(size_t size)
 {
-	void *ptr;
+	void	*ptr;
 
-	if ((ptr = (void *)malloc(size)) == NULL)
+	ptr = (void *)malloc(size);
+	if (ptr == NULL)
 		return (0);
 	ft_bzero(ptr, size);
 	return (ptr);

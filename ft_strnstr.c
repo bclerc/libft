@@ -6,7 +6,7 @@
 /*   By: bclerc <bclerc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 19:45:48 by bclerc            #+#    #+#             */
-/*   Updated: 2018/11/11 11:08:17 by bclerc           ###   ########.fr       */
+/*   Updated: 2021/08/28 17:42:46 by bclerc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 char	*ft_strnstr(const char *src, const char *find, size_t len)
 {
-	size_t i;
-	size_t b;
-	size_t lentmp;
+	size_t	i;
+	size_t	b;
+	size_t	lentmp;
 
 	lentmp = len;
 	if (!*find)
-		return (char*)src;
+		return ((char *)src);
 	i = 0;
 	while (lentmp > 0 && src[i])
 	{
@@ -28,7 +28,7 @@ char	*ft_strnstr(const char *src, const char *find, size_t len)
 		while (src[i + b] == find[b] && find[b])
 			b++;
 		if (!find[b] && i + b < len + 1)
-			return ((char*)&src[i]);
+			return ((char *)&src[i]);
 		i++;
 		lentmp--;
 	}

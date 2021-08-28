@@ -6,13 +6,13 @@
 /*   By: bclerc <bclerc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 15:25:54 by bclerc            #+#    #+#             */
-/*   Updated: 2018/11/11 17:15:00 by bclerc           ###   ########.fr       */
+/*   Updated: 2021/08/28 17:49:59 by bclerc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_strequ(char const *s1, char const *s2)
 {
-	int i;
+	int	i;
 
 	if (!s1 || !s2)
 		return (0);

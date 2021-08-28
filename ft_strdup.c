@@ -6,7 +6,7 @@
 /*   By: bclerc <bclerc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 13:52:52 by bclerc            #+#    #+#             */
-/*   Updated: 2021/01/05 11:46:16 by bclerc           ###   ########.fr       */
+/*   Updated: 2021/08/28 17:50:53 by bclerc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ char	*ft_strdup(const char *s)
 	char	*tab;
 	int		i;
 
-	if ((tab = (char*)malloc((ft_strlen((char*)s) + 1) * sizeof(char))) == NULL)
+	tab = (char *)malloc((ft_strlen((char *)s) + 1) * sizeof(char));
+	if (tab == NULL)
 		return (0);
 	tmp = (char *)s;
 	i = 0;
@@ -34,8 +35,8 @@ char	*ft_strdup(const char *s)
 
 char	*ft_strsdup(char *str, char *set)
 {
-	int i;
-	int b;
+	int	i;
+	int	b;
 
 	i = 0;
 	while (str[i])

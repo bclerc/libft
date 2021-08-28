@@ -6,7 +6,7 @@
 /*   By: bclerc <bclerc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 17:34:24 by bclerc            #+#    #+#             */
-/*   Updated: 2018/11/14 14:26:34 by bclerc           ###   ########.fr       */
+/*   Updated: 2021/08/28 17:41:41 by bclerc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strrchr(const char *s, int c)
 
 	i = 0;
 	last = 0;
-	tmp = (char*)s;
+	tmp = (char *)s;
 	while (tmp[i])
 	{
 		if (tmp[i] == c)

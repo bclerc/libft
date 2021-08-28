@@ -6,7 +6,7 @@
 /*   By: bclerc <bclerc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 11:57:51 by bclerc            #+#    #+#             */
-/*   Updated: 2018/11/12 16:48:40 by bclerc           ###   ########.fr       */
+/*   Updated: 2021/08/28 17:52:20 by bclerc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putnbr(int i)
 {
-	unsigned int z;
+	unsigned int	z;
 
 	if (i < 0)
 	{

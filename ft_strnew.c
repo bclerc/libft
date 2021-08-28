@@ -6,7 +6,7 @@
 /*   By: bclerc <bclerc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 11:54:02 by bclerc            #+#    #+#             */
-/*   Updated: 2018/11/13 17:26:16 by bclerc           ###   ########.fr       */
+/*   Updated: 2021/08/28 17:43:33 by bclerc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,10 @@
 
 char	*ft_strnew(size_t size)
 {
-	char *ptr;
+	char	*ptr;
 
-	if ((ptr = (char*)malloc((size + 1) * sizeof(char))) == NULL)
+	ptr = (char *)malloc((size + 1) * sizeof(char));
+	if (!ptr)
 		return (0);
 	ft_bzero(ptr, size);
 	ptr[size] = '\0';

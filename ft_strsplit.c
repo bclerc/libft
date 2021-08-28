@@ -6,7 +6,7 @@
 /*   By: bclerc <bclerc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 23:44:48 by bclerc            #+#    #+#             */
-/*   Updated: 2021/01/15 12:49:44 by bclerc           ###   ########.fr       */
+/*   Updated: 2021/08/28 18:16:09 by bclerc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ static	short	is_a_word(char before, char current, char strip)
 	return ((before == strip || before == 0) && current != strip);
 }
 
-static	int		total_words(char const *s, char strip)
+static	int	total_words(char const *s, char strip)
 {
-	int i;
-	int total;
+	int	i;
+	int	total;
 
 	i = 0;
 	total = 0;
@@ -34,7 +34,7 @@ static	int		total_words(char const *s, char strip)
 	return (total);
 }
 
-static	int		word_len(const char *c, char strip)
+static	int	word_len(const char *c, char strip)
 {
 	unsigned int	i;
 
@@ -44,30 +44,37 @@ static	int		word_len(const char *c, char strip)
 	return (i);
 }
 
-char			**ft_strsplit(char const *s, char c)
+int	check_fuck_norm(int i, char *tmp, char c)
+{
+	if (i > 0)
+		return (is_a_word(tmp[i - 1], tmp[i], c));
+	return (is_a_word(c, tmp[i], c));
+}
+
+char	**ft_strsplit(char const *s, char c)
 {
 	char	**str;
 	char	*tmp;
 	int		i;
 	int		stri;
 
-	if (!s || !(str = (char**)malloc((total_words(s, c) + 1) * sizeof(char*))))
+	str = (char **)malloc((total_words(s, c) + 1) * sizeof(char *));
+	if (!s || !(str))
 		return (NULL);
-	tmp = (char*)s;
-	i = 0;
-	stri = 0;
-	while (tmp[i])
+	tmp = (char *)s;
+	i = -1;
+	stri = -1;
+	while (tmp[++i] && stri++)
 	{
-		if (is_a_word(i > 0 ? tmp[i - 1] : c, tmp[i], c))
+		if (check_fuck_norm(i, tmp, c))
 		{
-			if (!(str[stri] = ft_strndup(&tmp[i], word_len(&tmp[i], c))))
+			str[stri] = ft_strndup(&tmp[i], word_len(&tmp[i], c));
+			if (!str[stri])
 			{
 				free(str);
 				return (NULL);
 			}
-			stri++;
 		}
-		i++;
 	}
 	str[stri] = 0;
 	return (str);

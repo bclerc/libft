@@ -6,7 +6,7 @@
 /*   By: bclerc <bclerc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 15:59:58 by bclerc            #+#    #+#             */
-/*   Updated: 2019/10/07 11:27:50 by bclerc           ###   ########.fr       */
+/*   Updated: 2021/08/28 17:46:43 by bclerc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t in;
-	size_t dest_size;
-	size_t src_size;
+	size_t	in;
+	size_t	dest_size;
+	size_t	src_size;
 
 	dest_size = ft_strlen(dst);
 	src_size = ft_strlen((char *)src);
