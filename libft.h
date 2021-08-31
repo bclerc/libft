@@ -6,7 +6,7 @@
 /*   By: bclerc <bclerc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 08:34:51 by bclerc            #+#    #+#             */
-/*   Updated: 2021/08/28 17:32:24 by bclerc           ###   ########.fr       */
+/*   Updated: 2021/08/31 17:02:03 by bclerc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ typedef struct s_list
 	struct s_list	*next;
 }				t_list;
 
+long			ft_atol(const char *str);
 t_list			*ft_lstnew(void const *content, size_t content_size);
 void			*ft_memset(void *s, int c, size_t n);
 void			*ft_memcpy(void *dest, const void *src, size_t n);
